@@ -1,20 +1,31 @@
 package Modelo;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     
+    private int id = 0; 
     protected String modelo;
     protected double precio; 
     protected String marca; 
     protected int año;
 
     public Vehiculo() {
+    
     }
 
-    public Vehiculo(String modelo, double precio, String marca, int año) {
+    public Vehiculo(int id, String modelo, double precio, String marca, int año) {
+        this.id = id;
         this.modelo = modelo;
         this.precio = precio;
         this.marca = marca;
         this.año = año;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getModelo() {
@@ -51,7 +62,7 @@ public class Vehiculo {
 
     @Override
     public String toString() {
-        return "Vehiculo [modelo=" + modelo + ", precio=" + precio + ", marca=" + marca + ", año=" + año + "]";
+        return "Vehiculo [" + "id=" + id + ", modelo=" + modelo + ", precio=" + precio + ", marca=" + marca + ", año=" + año + "]";
     }
 
     

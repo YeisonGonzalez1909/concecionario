@@ -6,13 +6,9 @@ public class Carro extends Vehiculo{
     private int velocidadMax;
     private int aceleracion;
 
-    public Carro(int potencia, int velocidadMax, int aceleracion) {
-        this.potencia = potencia;
-        this.velocidadMax = velocidadMax;
-        this.aceleracion = aceleracion;
-    }
-    public Carro(String modelo, double precio, String marca, int año, int potencia, int velocidadMax, int aceleracion) {
-        super(modelo, precio, marca, año);
+    public Carro(int id, String modelo, double precio, String marca, int año, int potencia, int velocidadMax,
+            int aceleracion) {
+        super(id, modelo, precio, marca, año);
         this.potencia = potencia;
         this.velocidadMax = velocidadMax;
         this.aceleracion = aceleracion;
